@@ -1,0 +1,7 @@
+.filters { display: flex; gap: 15px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+.filters label { display: flex; gap: 8px; align-items: center; color: #666; font-size: 14px; }
+.filters select { padding: 9px 12px; border-radius: 8px; background: #2a2a2a; color: white; border: 1px solid #444; cursor: pointer; }
+.clear-filter { padding: 9px 16px; border-radius: 8px; background: #e50914; color: white; border: none; cursor: pointer; font-weight: bold; }
+.clear-filter:hover { background: #ff1e2e; transform: scale(1.05); }
+.hub.light-mode .filters label { color: #333; }
+.hub.light-mode .filters select { background: #f0f0f0; color: #000; border: 1px solid #ddd; }

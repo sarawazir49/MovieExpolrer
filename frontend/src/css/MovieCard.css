@@ -1,0 +1,66 @@
+.movie-card {
+  background: #2a2a2a;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* HAYDA EL POP UP! 🔥 */
+.movie-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 2px #e50914;
+  z-index: 10;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.08);
+}
+
+.movie-info { padding: 15px; }
+.movie-info h3 { font-size: 17px; margin-bottom: 8px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.movie-meta { display: flex; justify-content: space-between; font-size: 13px; color: #aaa; margin-bottom: 3px; }
+.movie-meta b { color: #fff; }
+
+.card-actions { display: flex; flex-direction: row; gap: 8px; margin-top: 12px; }
+.card-actions button { flex: 1; padding: 9px 5px; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; font-size: 13px; transition: 0.2s; white-space: nowrap; }
+.card-actions .fav-btn { background: #e50914; color: white; }
+.card-actions .fav-btn.active { background: #ff4757; }
+.card-actions .watch-btn { background: #2a2a2a; color: white; border: 1px solid #444; }
+.card-actions .watch-btn.active { background: #007bff; border-color: #007bff; }
+.card-actions button:hover { opacity: 0.85; transform: scale(1.05); }
+
+/* Light Mode */
+.hub.light-mode .movie-card { background: #f5f5f5; }
+.hub.light-mode .movie-card:hover { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 2px #e50914; }
+.hub.light-mode .movie-info h3 { color: #000; }
+.hub.light-mode .movie-meta { color: #666; }
+.hub.light-mode .movie-meta b { color: #000; }
+.hub.light-mode .card-actions .watch-btn { background: #eee; color: #000; border-color: #ddd; }
+.hub.light-mode .card-actions .watch-btn.active { background: #007bff; color: #fff; }
+
+.movie-card { transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; }
+.movie-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 2px #e50914; z-index: 10; }
+/* ===== FIX MOBILE - 375px ===== */
+@media (max-width: 600px) {
+  .movie-card { border-radius: 12px; }
+  .movie-card img { height: 200px; }
+  .movie-info { padding: 10px; }
+  .movie-info h3 { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .movie-meta { font-size: 11px; gap: 4px; }
+  .movie-meta span { white-space: nowrap; }
+  .movie-meta b { white-space: nowrap; font-size: 11px; }
+
+  /* HAYDA EL FIX EL KIBIR! */
+  .card-actions { flex-direction: column !important; gap: 6px; }
+  .card-actions button { width: 100% !important; flex: none !important; font-size: 12px !important; padding: 8px 4px !important; white-space: nowrap; }
+}

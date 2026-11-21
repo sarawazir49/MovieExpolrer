@@ -1,0 +1,11 @@
+.sidebar { width: 250px; background: #1a1a1a; padding: 25px 20px; display: flex; flex-direction: column; gap: 30px; flex-shrink: 0; }
+.logo { font-size: 28px; font-weight: 700; }
+.side-section h3 { font-size: 22px; margin-bottom: 15px; }
+.side-section button { display: block; width: 100%; text-align: left; background: none; border: none; color: #ddd; padding: 12px 10px; font-size: 15px; cursor: pointer; border-radius: 8px; }
+.side-section button.active { background: #2a2a2a; color: white; font-weight: bold; }
+.show-all { color: #666 !important; font-size: 13px !important; }
+.side-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+.side-bottom button { padding: 10px; border: none; border-radius: 8px; background: #e50914; color: white; cursor: pointer; font-weight: bold; }
+.side-bottom .logout-btn { background: #333; }
+@media (max-width: 900px) { .sidebar { width: 100%; } }
+.theme-btn { background: #fff !important; color: #000 !important; font-weight: bold; }

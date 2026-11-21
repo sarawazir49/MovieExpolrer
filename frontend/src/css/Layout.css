@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Inter, Arial, sans-serif; }
+body { background: #e8eef2; }
+.hub { display: flex !important; background: #1a1a1a; color: white; min-height: 100vh; margin: 15px; border-radius: 20px; overflow: hidden; text-align: left; }
+.main { flex: 1; padding: 25px 30px; overflow-y: auto; min-width: 0; }
+.big-title { font-size: 60px; font-weight: 900; line-height: 1; margin-bottom: 25px; }
+.movies-grid-hub { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 15px 5px; overflow: visible; }
+.login-page { min-height: 100vh; background: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
+.login-box { background: #2a2a2a; padding: 30px; border-radius: 12px; display: flex; flex-direction: column; gap: 12px; width: 320px; }
+.login-box input { padding: 12px; border-radius: 8px; border: none; background: #1a1a1a; color: white; }
+.login-box button { padding: 12px; background: #e50914; color: white; border: none; border-radius: 8px; cursor: pointer; }
+@media (max-width: 900px) { .hub { flex-direction: column; } .movies-grid-hub { grid-template-columns: repeat(2, 1fr); } .big-title { font-size: 40px; } }
+/* ===== LIGHT MODE ===== */
+.hub.light-mode { background: #ffffff !important; color: #1a1a1a !important; }
+.hub.light-mode .sidebar { background: #f0f0f0 !important; color: #1a1a1a !important; }
+.hub.light-mode .side-section button { color: #333 !important; }
+.hub.light-mode .side-section button.active { background: #ddd !important; color: #000 !important; }
+.hub.light-mode .big-title { color: #1a1a1a !important; }
+.hub.light-mode .search-bar input { background: #f0f0f0 !important; color: #000 !important; }
+.hub.light-mode .filter-bar select, .hub.light-mode .filter-bar input { background: #f0f0f0 !important; color: #000 !important; border: 1px solid #ddd !important; }
+.hub.light-mode .movie-card { background: #f5f5f5 !important; color: #1a1a1a !important; }
+.hub.light-mode .details-box { background: #fff !important; color: #000 !important; }
+.hub.light-mode .details-meta { color: #666 !important; }
+.hub.light-mode .fav-btn { background: #eee !important; color: #000 !important; }
+.hub.light-mode .add-form { background: #f5f5f5 !important; color: #000 !important; }
+.hub.light-mode .add-form input, .hub.light-mode .add-form textarea { background: #fff !important; color: #000 !important; border: 1px solid #ddd !important; }
+.hub.light-mode .theme-btn { background: #1a1a1a !important; color: #fff !important; }
+/* ===== RESPONSIVE ===== */
+
+/* Tablet - iPad */
+@media (max-width: 1100px) {
+  .movies-grid-hub { grid-template-columns: repeat(3, 1fr); }
+  .big-title { font-size: 45px; }
+  .sidebar { width: 200px !important; }
+}
+
+/* Mobile Kbir */
+@media (max-width: 900px) {
+  .hub { flex-direction: column; margin: 0; border-radius: 0; }
+  .sidebar { width: 100% !important; flex-direction: row; flex-wrap: wrap; padding: 15px; gap: 10px; }
+  .sidebar .side-section { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sidebar .side-section h3 { width: 100%; }
+  .sidebar .side-section button { flex: 1; min-width: 110px; }
+  .main { padding: 20px 15px; }
+  .big-title { font-size: 38px; }
+  .movies-grid-hub { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+  .filters { flex-direction: row; }
+}
+
+/* Mobile  - iPhone */
+@media (max-width: 600px) {
+  .movies-grid-hub { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .big-title { font-size: 30px; }
+  .movie-card img { height: 220px; }
+  .card-actions { flex-direction: column; }
+  .card-actions button { font-size: 12px; padding: 8px; }
+  .search-bar input { font-size: 14px; }
+  .filters { flex-direction: column; align-items: stretch; }
+  .filters label { justify-content: space-between; }
+  .filters select { flex: 1; }
+  .details-box { flex-direction: column; width: 95%; max-height: 90vh; overflow-y: auto; }
+  .details-box img { width: 100%; height: 250px; object-fit: cover; }
+  .login-box { width: 90%; }
+}
