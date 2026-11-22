@@ -8,7 +8,7 @@ export default function Login({ onLogin }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const url = isRegister ? 'http://localhost:5000/api/register' : 'http://localhost:5000/api/login'
+    const url = isRegister ? 'https://movieexpolrer.onrender.com/api/register' : 'https://movieexpolrer.onrender.com/api/login'
     const res = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
